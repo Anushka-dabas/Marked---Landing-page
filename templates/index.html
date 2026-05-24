@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marked | AI -  Powered Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Marked Logo" style="height: 32px;">
+            <div class="logo-text">Marked</div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="#journey">Journey</a>
+            <a href="#tech">Tech Stack</a>
+        </div>
+        <div class="nav-cta">
+            <a href="https://marked-main.streamlit.app/" class="btn-pill">Begin AI Attendance <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M9 5l7 7-7 7" />
+                </svg></a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">
+            Welcome to Marked: The Ultimate AI-Powered Attendance System for Modern Classrooms
+        </div>
+
+        <h1>AI Powered<br>Attendance <span>System</span></h1>
+
+        <p>Transforming classroom management with advanced computer vision and voice biometrics. Chosen by educators for unmatched speed, accuracy, and security.</p>
+
+        <div class="hero-actions">
+            <a href="https://marked.streamlit.app/" class="btn-cta">Begin AI Attendance <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M9 5l7 7-7 7" />
+                </svg></a>
+            <a href="#journey" class="link-action">Explore Journey</a>
+        </div>
+
+
+
+        <div class="floating-card card-left">
+            <div class="card-img"><img
+                    src="{{ url_for('static', filename='img/demo/marked-teacher-flow-5.2-photo-attendance.png') }}"
+                    alt="Marked Student"></div>
+        </div>
+
+        <div class="floating-card card-right">
+            <div class="card-img"><img src="{{ url_for('static', filename='img/demo/marked-landing.png') }}"
+                    alt="Marked Landing"></div>
+        </div>
+
+
+    </header>
+
+    <section id="features" class="features">
+        <h2>Innovative Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="f-icon-box">📸</div>
+                <h3>Biometric Face Scanning</h3>
+                <p>Advanced neural networks dentify every student from a single group photograph, making roll call immediate and reliable.</p>
+            </div>
+            <div class="feature-card">
+                <div class="f-icon-box">🎙️</div>
+                <h3>Smart Voice Verification</h3>
+                <p>tudents state their presence in sequence, allowing our audio engine to match vocal frequencies against saved database vectors in real time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="f-icon-box">📱</div>
+                <h3>QR-Based Registration</h3>
+                <p>Dynamic subject codes facilitate instantaneous student enrollment, eliminating manual roster creation and administrative bottlenecks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="teacher-flow">
+        <div class="flow-container">
+            <div class="section-tag" style="text-align: center; display: block; margin-bottom: 40px;">— Workflow —</div>
+            <h2 style="text-align: center; font-size: 3.5rem; margin-bottom: 80px;">The Teacher's Workflow</h2>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 01</span>
+                    <h3>Verified Portal Entry</h3>
+                    <p>Access your administrative workspace through our encrypted login gateway, keeping all course information synchronized and protected.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/marked-teacher-flow-1-login.png') }}"
+                        alt="Login Portal">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 02</span>
+                    <h3>Interactive Dashboard</h3>
+                    <p>Manage your subjects, attendance history, and student lists from a clean, unified control view.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/marked-teacher-flow-2-dashboard.png') }}"
+                        alt="Teacher Dashboard">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 03</span>
+                    <h3>Course Setup</h3>
+                    <p>Adding a new subject is easy. Just give it a name, and Marked handles everything else needed to start tracking.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/marked-teacher-flow-3-create-course.png') }}"
+                        alt="Create Course">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 04</span>
+                    <h3>FaceID Attendance</h3>
+                    <p>Use computer vision models to scan the room. Our AI checks a single class photo to find and mark every student present in seconds.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/marked-teacher-flow-5.2-photo-attendance.png') }}"
+                        alt="FaceID Attendance">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 05</span>
+                    <h3>Voice ID Attendance</h3>
+                    <p>Switch to audio mode for verbal roll-call. Students speak one by one, and our AI verifies their unique voice signatures.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/marked-teacher-flow-5.1-voice-attendance.png') }}"
+                        alt="Voice Attendance">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 06</span>
+                    <h3>Attendance Reports</h3>
+                    <p>Check and manage your saved logs. View model confidence scores, download CSV data sheets, and track long-term trends.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/marked-teacher-flow-5-see-stored-records.png') }}"
+                        alt="Records Management">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-stack">
+        <div class="section-tag">—  Backend —</div>
+        <h2>Advanced Tech Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">⚡</div>
+                    <div class="tech-info">
+                        <h4>Streamlit & Flask</h4>
+                        <p>Reactive frontend setup connected with Flask landing layer.</p>
+                    </div>
+                    <span class="tech-tag">Platform</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">👁️</div>
+                    <div class="tech-info">
+                        <h4>Face Registration</h4>
+                        <p>Using FaceRecognition and Dlib libraries for high-accuracy facial biometrics.</p>
+                    </div>
+                    <span class="tech-tag">Vision AI</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">🎙️</div>
+                    <div class="tech-info">
+                        <h4>Voice Embeddings</h4>
+                        <p>Using Resemblyzer and Librosa tools to extract unique student voice signatures.</p>
+                    </div>
+                    <span class="tech-tag">Audio AI</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">☁️</div>
+                    <div class="tech-info">
+                        <h4>Supabase Cloud</h4>
+                        <p>Real-time PostgreSQL database with secure user authentication and data sync.</p>
+                    </div>
+                    <span class="tech-tag">Storage</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="student-journey" class="teacher-flow" style="background: white;">
+        <div class="flow-container">
+            <div class="section-tag" style="text-align: center; display: block; margin-bottom: 40px;">— Workflow —
+            </div>
+            <h2 style="text-align: center; font-size: 3.5rem; margin-bottom: 80px;">The Student's Journey</h2>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Phase 01</span>
+                    <h3> Immediate Enrollment</h3>
+                    <p>Students join their classes in seconds using the unique course codes or subject links sent by their teachers.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/marked-student-flow-1-login.png') }}"
+                        alt="Student Enrollment">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Phase 02</span>
+                    <h3>Biometric Setup</h3>
+                    <p>tudents register their FaceID and VoiceID profiles once. The AI saves these biometrics to use for all future classes.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/marked-student-flow-2-enroll.png') }}"
+                        alt="Biometric Registration">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Phase 03</span>
+                    <h3>Student Dashboard</h3>
+                    <p>A unified view for students to see their attendance percentages across all subjects and get real-time updates. </p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/marked-student-flow-3-dashboard.png') }}"
+                        alt="Student Dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="purple-section">
+        <h2>Ready to upgrade your classroom?</h2>
+        <p>Join the educators who have simplified their daily routines with Marked. Try the smart AI-powered attendance system today.</p>
+        <a href="https://marked.streamlit.app/" class="btn-white">Begin AI Attendance Now</a>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Marked Logo">
+                    <div class="logo-text">Marked</div>
+                </div>
+                <p>Next-generation classroom tracking powered by advanced AI biometrics. Enter the future of education today.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">AI Attendance</a></li>
+                    <li><a href="#features">Smart Roster</a></li>
+                    <li><a href="#tech">Tech Stack</a></li>
+                    <li><a href="#student-journey">Student Portal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Experience</h4>
+                <ul>
+                    <li><a href="#journey">Teacher Journey</a></li>
+                    <li><a href="#student-journey">Student Journey</a></li>
+                    <li><a href="#features">Voice ID Roll-call</a></li>
+                    <li><a href="#features">FaceID Scan</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marked AI. Built with care for modern educators everywhere.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
